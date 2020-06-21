@@ -126,7 +126,6 @@ class CommentForm extends Component{
         if(comments!=null){
             const commentSec=comments.map((comment) =>{
                 return(
-                    <Stagger in>
                     <Fade in>
                     <li key={comment.id}>
                         <p>{comment.comment}</p>
@@ -134,15 +133,17 @@ class CommentForm extends Component{
                         </p>
                     </li>
                     </Fade>
-                    </Stagger>
+                      
                 );
             });
             return(
                 <div>
                     <h4>Comments</h4>
+                    <Stagger in>
                     <ul className="list-unstyled">
                         {commentSec}
                     </ul>
+                    </Stagger>
                     <CommentForm dishId={dishId} postComment={postComment} />
                 </div>
             );
