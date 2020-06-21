@@ -137,15 +137,16 @@ class CommentForm extends Component{
                 );
             });
             return(
+                <Stagger in>
                 <div>
                     <h4>Comments</h4>
-                    <Stagger in>
+                    
                     <ul className="list-unstyled">
                         {commentSec}
                     </ul>
-                    </Stagger>
                     <CommentForm dishId={dishId} postComment={postComment} />
                 </div>
+                </Stagger>
             );
         }
         else{
